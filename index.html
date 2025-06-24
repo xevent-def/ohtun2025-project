@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>와!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>와!!!!</h1>
+        </header>
+
+        <nav>
+            <button id="writePostBtn">글쓰기</button>
+        </nav>
+
+        <main>            <section id="postList">
+                <!-- 게시글 목록이 여기에 동적으로 추가됩니다 -->
+            </section>
+            
+            <div id="pagination">
+                <button id="prevPage" style="display: none;">이전</button>
+                <span id="currentPage">1</span>
+                <button id="nextPage" style="display: none;">다음</button>
+            </div>
+
+            <div id="postModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>글쓰기</h2>
+                    <form id="postForm">
+                        <input type="text" id="postTitle" placeholder="제목" required>
+                        <textarea id="postContent" placeholder="내용" required></textarea>
+                        <button type="submit">등록</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="postDetailModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="postDetail">
+                        <!-- 게시글 상세 내용이 여기에 동적으로 추가됩니다 -->
+                    </div>
+                    <div id="comments">
+                        <h3>댓글</h3>
+                        <form id="commentForm">
+                            <textarea id="commentContent" placeholder="댓글을 입력하세요" required></textarea>
+                            <button type="submit">댓글 등록</button>
+                        </form>
+                        <div id="commentList">
+                            <!-- 댓글 목록이 여기에 동적으로 추가됩니다 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
